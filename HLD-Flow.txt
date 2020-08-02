@@ -1,0 +1,21 @@
+title [Ravenshaw Alumni]
+
+participant User
+participant Login
+participant Blog
+participant Like/Unlike
+participant Share
+participant Donate
+participant Logout
+
+==Admin User Functions==
+User->Login: Login(Admin Credentials)
+Login-->Blog: Create Blog
+Donate<--Logout: Logout
+
+==Normal User Functions==
+User->Login: Login(Non-Admin Credentials)
+Login-->Donate: Donate
+User->Like/Unlike: Likes / Unlikes blog
+User->Share: Shares blog
+Donate<--Logout: Logout

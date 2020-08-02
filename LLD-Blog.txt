@@ -1,0 +1,19 @@
+title [Blog Functionality]
+
+participant User
+participant Upload-Image
+participant Upload-Content
+participant Comment
+participant Donate
+participant PaymentGateway
+
+User-->Upload-Image: Image Upload
+User-->Upload-Content: Content Load
+box right of Comment:Database
+box right of Upload-Image:Image-Store
+box right of Upload-Content:Content-Store
+User-->Comment: Comment 
+User-->Upload-Content: Like or Unlike
+User-->Upload-Content: Share with Whatsapp / Facebook / Gmail etc
+User-->Donate: Donate
+Donate-->PaymentGateway: Payment Gateway

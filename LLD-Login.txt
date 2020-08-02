@@ -1,0 +1,13 @@
+title [Login Functionality]
+
+participant Signup/Signin
+participant Login Page
+participant Home Page
+participant Blog Page
+participant Logout Page
+
+Signup/Signin-->Login Page: Login\n(Username, Password, Email)\nGoogle Login\nFacebook Login
+Login Page-->Home Page: Redirect to Home Page
+Home Page-->Blog Page: Redirect to Blog Page 
+Blog Page-->Logout Page: Redirect to Blog Page 
+Logout Page-->Login Page: Logout
