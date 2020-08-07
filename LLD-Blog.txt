@@ -1,5 +1,3 @@
-title [Blog Functionality]
-
 participant User
 participant Upload-Image
 participant Upload-Content
@@ -8,12 +6,13 @@ participant Donate
 participant PaymentGateway
 
 User-->Upload-Image: Image Upload
+box right of Upload-Image:Cloud Front
+box right of Upload-Content:Cloud Front or Database
 User-->Upload-Content: Content Load
 box right of Comment:Database
-box right of Upload-Image:Image-Store
-box right of Upload-Content:Content-Store
 User-->Comment: Comment 
 User-->Upload-Content: Like or Unlike
+box right of Upload-Content: Store Like/Unlike in Database
 User-->Upload-Content: Share with Whatsapp / Facebook / Gmail etc
 User-->Donate: Donate
 Donate-->PaymentGateway: Payment Gateway
